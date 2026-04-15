@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <style>
+    /* Basic Page Setup */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    /* Sidebar Styling */
+    .sidebar {
+      width: 250px;
+      background-color: #f8f9fa;
+      padding: 30px 20px;
+      border-right: 1px solid #ddd;
+      position: fixed; /* Keeps it on screen */
+      height: 100%;
+      overflow-y: auto;
+    }
+    .sidebar h2 { margin-top: 0; }
+    .sidebar a {
+      display: block;
+      padding: 10px 0;
+      color: #0366d6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .sidebar a:hover { color: #000; }
+
+    /* Main Content Styling */
+    .main-content {
+      margin-left: 290px; /* Pushes content to the right of the sidebar */
+      padding: 40px;
+      max-width: 800px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>[Your Name]</h2>
+    <a href="./">🏠 Home</a>
+    <a href="./research">🔬 Research</a>
+    <a href="./hobbies">🧗‍♂️ Hobbies</a>
+    <a href="./job">💼 Job Experience</a>
+  </div>
+
+  <div class="main-content">
+    {{ content }}
+  </div>
+
+</body>
+</html>
